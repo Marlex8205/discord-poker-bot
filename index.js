@@ -3,8 +3,8 @@ const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent]
 });
 
-// ⚠️ Setze hier DEINEN Token ein (nicht öffentlich posten!)
-const TOKEN = "MTQxMTcyNjk3NTAzNDMyNzE4MA.GT-073.P6bMCxviOlR82zxiz_ELHNFiE1FT5e5dDGFiGs";
+const TOKEN = process.env.DISCORD_TOKEN;
+
 
 client.once('ready', () => {
     console.log(`✅ Eingeloggt als ${client.user.tag}`);
